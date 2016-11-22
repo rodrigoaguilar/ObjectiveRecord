@@ -1,6 +1,5 @@
 platform :ios, :deployment_target => "5.0"
+target 'SampleProject' do
   pod 'ObjectiveSugar'
   pod 'ObjectiveRecord', :path => '../'
-target :SampleProjectTests, :exclusive => true do
-  pod 'Kiwi/XCTest', '2.2.4'
 end
