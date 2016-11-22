@@ -25,6 +25,11 @@
     return YES;
 }
 
+- (void)applicationDidEnterBackground:(UIApplication *)application
+{
+    [[CoreDataManager sharedManager] saveContext];
+}
+
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
