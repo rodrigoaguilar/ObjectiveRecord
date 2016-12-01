@@ -345,6 +345,8 @@
     BOOL save = [self.managedObjectContext save:&error];
 
     if (!save || error) {
+        NSException* exception = [NSException exceptionWithName:@"Core Data Save Error" reason:error.description userInfo:nil];
+        [exception raise];
         NSLog(@"Unresolved error in saving context for entity:\n%@!\nError: %@", self, error);
         return NO;
     }
